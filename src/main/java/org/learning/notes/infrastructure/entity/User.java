@@ -2,10 +2,9 @@ package org.learning.notes.infrastructure.entity;
 
 import jdk.jfr.DataAmount;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import org.hibernate.validator.constraints.Range;
+import javax.validation.constraints.Email;
 
 import lombok.Data;
 import java.time.LocalDateTime;
@@ -20,7 +19,7 @@ public class User {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
-    @Email(message = "email not valid", unique = true)
+    @Email(message = "email not valid")
     @Column(name = "email")
     private String email;
 

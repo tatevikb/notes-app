@@ -14,6 +14,10 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+	implementation group: 'org.hibernate', name: 'hibernate-validator', version: '7.0.1.Final'
+	implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
