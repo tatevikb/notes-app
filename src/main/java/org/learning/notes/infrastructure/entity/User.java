@@ -11,13 +11,12 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(name = "users", uniqueConstraints=
-@UniqueConstraint(columnNames={"email"}))
+@Table(name = "users")
 public class User {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Email(message = "email not valid")
     @Column(name = "email")

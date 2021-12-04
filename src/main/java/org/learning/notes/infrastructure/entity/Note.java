@@ -14,7 +14,7 @@ public class Note {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Range(max=50, message = "The title length exceeds the allowable")
     @Column(name = "title")
